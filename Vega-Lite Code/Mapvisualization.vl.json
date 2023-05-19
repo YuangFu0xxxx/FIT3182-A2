@@ -7,7 +7,7 @@
   "layer": [
     {
       "data": {
-        "url": "https://raw.githubusercontent.com/YuangFu0527/FIT3179/main/3179%20Map/ne_110m_admin_0_countries.json",
+        "url": "https://raw.githubusercontent.com/YuangFu0xxxx/FIT3182-A2/main/Vega-Lite%20Code/ne_110m_admin_0_countries.json",
         "format": {"type": "topojson", "feature": "ne_110m_admin_0_countries"}
       },
       "mark": {"type": "geoshape", "fill": "lightblue", "stroke": "gray"}
