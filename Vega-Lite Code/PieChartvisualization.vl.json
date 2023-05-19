@@ -7,7 +7,7 @@
       {"category": "Development countries", "value": 72055637}
     ]
   },
-  "mark": "arc",
+  "mark": {"type": "arc","tooltip":true},
   "encoding": {
     "theta": {"field": "value", "type": "quantitative"},
     "color": {"field": "category", "type": "nominal"}
