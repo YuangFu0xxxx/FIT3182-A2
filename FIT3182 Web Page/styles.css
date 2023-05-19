@@ -1,0 +1,74 @@
+.body {
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+h1 {
+    font-weight: 900;
+    color: lightgoldenrodyellow;
+    text-align: center;
+}
+
+h2 {
+    font-weight: 600;
+    color:rgba(0, 33, 244, 0.825);
+}
+
+p{
+    font-size: 20px;
+    color: black;
+}
+
+body {
+    background-color: lightgray;
+    background-image: url(https://th.bing.com/th/id/OIP.BhBobljbi6FWaT0NRaZakgHaE8?w=289&h=193&c=7&r=0&o=5&dpr=1.25&pid=1.7);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+.page {
+    width: 900px;
+    background-color: darkcyan;
+    margin: auto;
+    padding: 20px;
+    padding-top: 35px;
+    text-align: left;
+}
+
+
+
+
+CN{
+    color: yellow;
+}
+
+NZ{
+    color: lightgrey;
+}
+
+US{
+    color: orange;
+}
+
+.PiechartD{
+    text-align: center;
+}
+
+.ChinaVsWorld{
+    text-align: center ;
+}
+
+.InteractiveLine{
+    text-align: center;
+}
+
+.BarChart{
+    text-align: center;
+}
+
+.InteractionLine{
+    text-align: center;
+}
+
+.end{
+    text-align: center;
+}
