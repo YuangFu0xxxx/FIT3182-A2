@@ -1,0 +1,19 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width":500,
+  "title":"Country Vs Sum of carbon emission",
+  "data": {
+    "url": "https://raw.githubusercontent.com/YuangFu0527/FIT3179/main/Data/Carbon%20dioxide%20emission.csv"
+  },
+  "mark": "bar",
+  "encoding": {
+    "x": {
+      "field": "Sum_of_each_countries",
+      "type": "quantitative",
+      "title": "Sum of the carbon emission"
+    },
+    "y": {"field": "Country", "type": "nominal"},
+    "color":{"field":"Country"},
+    "tooltip": [{"field": "Value (kilotonne/kt)", "type": "quantitative"}]
+  }
+}
