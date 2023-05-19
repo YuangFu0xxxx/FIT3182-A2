@@ -1,0 +1,15 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "title": "Developing countries Vs Development countries",
+  "data": {
+    "values": [
+      {"category": "Developing countries", "value": 139426882},
+      {"category": "Development countries", "value": 72055637}
+    ]
+  },
+  "mark": "arc",
+  "encoding": {
+    "theta": {"field": "value", "type": "quantitative"},
+    "color": {"field": "category", "type": "nominal"}
+  }
+}

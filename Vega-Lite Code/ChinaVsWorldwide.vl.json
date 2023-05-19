@@ -1,0 +1,22 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "data": {
+    "url": "https://raw.githubusercontent.com/YuangFu0527/FIT3179/main/Data/Carbon%20dioxide%20emission.csv"
+  },
+  "repeat": {"layer": ["China", "Worldwide_emission"]},
+  "spec": {
+    "mark": {"type": "line", "point": false},
+    "encoding": {
+      "x": {"field": "Year", "type": "ordinal"},
+      "y": {
+        "aggregate": "mean",
+        "field": {"repeat": "layer"},
+        "type": "quantitative",
+        "title": "Mean of China and Worldwide Gross"
+      },
+      "color": {"datum": {"repeat": "layer"}, "type": "nominal"}
+    }
+  }
+}

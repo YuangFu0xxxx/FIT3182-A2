@@ -1,0 +1,94 @@
+{
+  "$schema": "https://vega.github.io/schema/vega-lite/v5.json",
+  "width": 500,
+  "height": 400,
+  "title":"Yearly carbon dioxide emission",
+  "data": {
+    "url": "https://raw.githubusercontent.com/YuangFu0527/FIT3179/main/Data/Carbon%20dioxide%20emission.csv"
+  },
+  "params": [
+    {
+      "name": "Select_Country",
+      "bind": {
+        "input": "select",
+        "options": [
+          null,
+          "Australia",
+          "Brazil",
+          "Canada",
+          "China",
+          "France",
+          "Japan",
+          "Netherlands",
+          "New Zealand",
+          "Russian ",
+          "Turkey",
+          "UK",
+          "USA",
+          "Ukraine"
+        ],
+        "labels": [
+          "Show all",
+          "Australia",
+          "Brazil",
+          "Canada",
+          "China",
+          "France",
+          "Japan",
+          "Netherlands",
+          "New Zealand",
+          "Russian ",
+          "Turkey",
+          "UK",
+          "USA",
+          "Ukraine"
+        ],
+        "name": "Select_Country :"
+      }
+    }
+  ],
+  "transform": [
+    {"filter": "Select_Country == null || datum.Country == Select_Country"}
+  ],
+  "mark": {"type": "line", "point": true},
+  "encoding": {
+    "x": {
+      "field": "Year",
+      "type": "quantitative",
+      "title": "Year",
+      "scale": {"type": "log", "domain": [2010, 2019]}
+    },
+    "y": {
+      "field": "Value (kilotonne/kt)",
+      "type": "quantitative",
+      "title": "Value (kilotonne/kt)",
+      "scale": {"type": "log", "domain": [10000, 11000000]}
+    },
+    "color": {
+      "field": "Country",
+      "type": "nominal",
+      "scale": {
+        "domain": [
+          "Australia",
+          "Brazil",
+          "Canada",
+          "China",
+          "France",
+          "Japan",
+          "Netherlands",
+          "New Zealand",
+          "Russian ",
+          "Turkey",
+          "UK",
+          "USA",
+          "Ukraine"
+        ]
+      }
+    },
+    "tooltip": [
+      {"field": "Country", "type": "nominal"},
+      {"field": "Value (kilotonne/kt)", "type": "quantitative"},
+      {"field": "Year", "type": "quantitative"}
+    ]
+  }
+}
