@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdn.jsdelivr.net/npm/vega@5.20.2"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-lite@5.1.0"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vega-embed@6.17.0"></script>
+    <title>Carbon dioxide emission</title>
+</head>
+<body>
+    <div class="page">
+        <h1> 
+            Carbon dioxide emission 2010-2019 <br> Investigation of development & developing country </h1>
+        <p> 
+            <b>Carbon dioxide (CO2)</b> is a colourless, odourless and non-poisonous gas formed by combustion
+            of carbon and in the respiration of living organisms.
+            <b>Carbon dioxide emissions</b> or CO2 emissions
+            are emissions stemming from the burning of fossil fuels and the manufacture of cement.
+        </p>
+
+        <p>
+            The following visualisation present the data from both <b>development countries</b> and
+            <b>developing countries</b> carbon dioxide emission  that explore from interenet,
+            Aiming at a <b>map</b>,<b>yearly
+            emission</b> for each country, comparsion of development
+            & developing countries
+        </p>
+
+        <hr color="lightgrey" size="20">
+
+        <h2>
+            Map Location
+        </h2>
+
+        <div id="vis1"></div>
+
+        <div class="mapInstruction">
+            <p>
+                The map display the location of countries which are in survey, the <b>Color</b> of the points(Country) are represent
+                the <b>Sum</b> of the emission of carbon dioxide in kilotonne(kt), then the <b>Size</b> of the point is their emission level.
+                When moving the mouse on the point, the tooplip will present the value in year 2019, then with sum for ten years
+                (2010-2019)
+            </p>
+
+            <p>
+                There are 13 countries in this survey, 7 countries are considered as development countries, 
+                others are the country in developing, by a general view, the countries that in the map is: Australia
+                New zealand, USA, UK, China, Brazil, Ukraine, Canada, France, Netherland, Japan, Russian, Turkey.
+            </p>
+
+            <p>
+                By observing the map, although it seems to USA has almost same size(emission level) of point with Russian and China,
+                but according to Emission in kt, <CN> China </CN> has the <b>highest</b> emission over ten years.
+            </p>
+
+            <p>
+                <NZ>New zealand</NZ> has the <b>lowest</b> carbon dioxide emission in there 13 countries, one should be noted that is 
+                <NZ>New zealand </NZ>is a <b>development country</b>, the significant country in development countries is <US>USA</US>
+                , it contributes <b>54010574 kt</b> in this ten years
+            </p>
+
+
+        </div>
+
+        <hr color="lightgrey" size="20">
+
+        <h2>
+            Developing Vs development countries 
+        </h2>
+
+        <div class="PiechartD">
+            <div id="vis2"></div> 
+            <p>
+                As the pie chart shown above, there is a pie chart comparsion about developing & development countries in
+                10 years the <b>developing countries</b> are set on left hand side corner, which has the country:
+                Turkey, Brazil, China, Russian, Netherland,Ukraine.
+            </p>
+
+            <p>
+                It's clear that data from <b>developing country</b> is much <b>higher</b> than development country,
+                almost take up <b>66%</b> of the total emission in 10 years and development countries take up <b>34%</b>
+            </p>
+        </div>
+
+        <h2>
+            China Vs World
+        </h2>
+
+        <div class="ChinaVsWorld">
+            <div id ="vis3"></div>
+            <p>
+                According to the map and pie chart above, China has contributes a lot to the carbon dioxide emission not only in the
+                sum of ten years but also splited in each year, this chart shown that each year the sum of <b>all</b> countries and make 
+                comparsion with China, roughly to see that China nearly <b>half</b> of the carbon dioxide emission for all.
+            </p>
+        </div>
+
+        <hr color="lightgrey" size="20">
+
+        <h2>
+            Countries exploration
+        </h2>
+
+        <div class = "InteractiveLine">
+            <div id ="vis5"></div>
+            <p>
+                After get a general view, there is a colored graph for each countries and be piled up as the 
+                sum of the investigate countries emission in these ten years, the area of each countries represent 
+                their contribution to the total in each year, when put on one particular area, the graph will perform
+                legend as a reaction.
+            </p>
+        </div>
+
+        <div class="BarChart">
+            <div id="vis6"></div>
+            <p>
+                The bar chart has directly present each country total emissions in ten years,
+                horizontally place this country will shown a comparsion on sight, a estimate
+                also can be made by viewing this chart.
+            </p>
+        </div>
+
+        <div class="InteractionLine">
+            <div id="vis4"></div>
+            <p>
+                During the Investigation of carbon dioxide emission, a trend line with detailed data for each year
+                is imperative for analysis, the Line chart shown above is a interactive line chart, by pressing
+                <b>select_country button</b>, choosing particular country to hide other country in order to further exploring.
+            </p>
+        </div>
+
+        <hr color="lightgrey" size="20">
+
+        <div class="end">
+            <p>
+                This visualisation is create by <a href="https://github.com/YuangFu0xxxx/FIT3182-A2/tree/main">YuangFu</a>
+                as FIT3182 A2
+            </br>Data scource by <a href="http://data.un.org/Data.aspx?d=GHG&f=seriesID%3aCO2">UNdata</a>
+            </p>
+        </div>
+
+
+
+
+    </div>
+
+
+
+<script type="text/javascript">
+    var specvis1 = "https://raw.githubusercontent.com/YuangFu0xxxx/FIT3182-A2/main/Vega-Lite%20Code/Mapvisualization.vl.json";
+    var specvis2 = "https://raw.githubusercontent.com/YuangFu0xxxx/FIT3182-A2/main/Vega-Lite%20Code/PieChartvisualization.vl.json"
+    var specvis3 = "https://raw.githubusercontent.com/YuangFu0xxxx/FIT3182-A2/main/Vega-Lite%20Code/ChinaVsWorldwide.vl.json"
+    var specvis4 = "https://raw.githubusercontent.com/YuangFu0xxxx/FIT3182-A2/main/Vega-Lite%20Code/InteractiveLinevisualization.vl%20(1).json"
+    var specvis5 = "https://raw.githubusercontent.com/YuangFu0xxxx/FIT3182-A2/main/Vega-Lite%20Code/ColorSchemevisualization.vl.json"
+    var specvis6 = "https://raw.githubusercontent.com/YuangFu0xxxx/FIT3182-A2/main/Vega-Lite%20Code/CoomparsionBarChart.vl.json"
+    vegaEmbed('#vis3', specvis3, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    vegaEmbed('#vis1', specvis1, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    vegaEmbed('#vis2', specvis2, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    vegaEmbed('#vis4', specvis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    vegaEmbed('#vis5', specvis5, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+  vegaEmbed('#vis4', specvis4, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+    vegaEmbed('#vis6', specvis6, {"actions": false}).then(function(result) {
+    // Access the Vega view instance (https://vega.github.io/vega/docs/api/view/) as result.view
+  }).catch(console.error);
+</script>
+</body>
+</html>
